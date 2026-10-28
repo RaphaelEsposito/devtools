@@ -1,15 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tailwind v4 et Sass</title>
-        <link rel="stylesheet" href="./src/output.css">
-    </head>
-    <body class="min-h-screen bg-slate-100 p-8">
-        <article class="custom-card mx-auto max-w-xl shadow-lg">
-            <h1 class="text-2xl font-bold">Une carte, deux sources de styles</h1>
-            <p class="mt-4">Le composant vient du SCSS, les utilitaires de Tailwind.</p>
-        </article>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTools</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body>
+
+    <header>
+        <h1>DevTools</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Votre bibliothèque d'outils</h2>
+            <p>Retrouvez les outils utiles pour coder, concevoir et vérifier vos interfaces.</p>
+        </section>
+        <section>
+            <label for="recherche">Rechercher un outil</label>
+            <input type="search" id="recherche" placeholder="Rechercher par nom ou catégorie...">
+            <p id="compteur" role="status" aria-live="polite">24 outils disponibles</p>
+        </section>
+        <section>
+            <div id="grille-outils"></div>
+        </section>
+        <p id="message-vide" hidden>Aucun outil trouvé pour cette recherche.</p>
+    </main>
+    
+</body>
 </html>
