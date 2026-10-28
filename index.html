@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,27 +7,42 @@
     <title>DevTools</title>
     <link rel="stylesheet" href="./dist/output.css">
 </head>
-<body>
 
-    <header>
-        <h1>DevTools</h1>
+<body class="min-h-screen bg-slate-50 text-slate-900">
+
+    <header class="bg-white border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 py-5">
+            <h1 class="text-2xl font-bold text-blue-600">DevTools</h1>
+        </div>
     </header>
-
-    <main>
-        <section>
-            <h2>Votre bibliothèque d'outils</h2>
-            <p>Retrouvez les outils utiles pour coder, concevoir et vérifier vos interfaces.</p>
-        </section>
-        <section>
-            <label for="recherche">Rechercher un outil</label>
-            <input type="search" id="recherche" placeholder="Rechercher par nom ou catégorie...">
-            <p id="compteur" role="status" aria-live="polite">24 outils disponibles</p>
-        </section>
-        <section>
-            <div id="grille-outils"></div>
-        </section>
-        <p id="message-vide" hidden>Aucun outil trouvé pour cette recherche.</p>
-    </main>
     
+    <main class="max-w-6xl mx-auto px-6 py-10">
+        <section class="mb-10">
+            <h2 class="max-w-xl text-3xl md:text-4xl font-bold leading-tight mb-4">Votre boîte à outils de développeur</h2>
+            <p class="text-slate-600 max-w-2xl">
+                Retrouvez les outils utiles pour coder, concevoir et vérifier vos interfaces.
+            </p>
+        </section>
+        <section class="mb-10">
+            <label for="recherche" class="block text-sm font-medium mb-2">
+                Rechercher un outil
+            </label>
+            <input
+                type="search"
+                id="recherche"
+                placeholder="Nom ou catégorie, ex. Design"
+                class="w-full md:max-w-xl rounded-lg border border-indigo-500 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+            <p id="compteur" role="status" aria-live="polite" class="mt-4 text-sm text-slate-600">
+                24 outils trouvés
+            </p>
+        </section>
+        <section>
+            <div id="grille-outils" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+        </section>
+        <p id="message-vide" hidden class="text-center text-slate-500 py-10">
+            Aucun outil trouvé pour cette recherche.
+        </p>
+    </main>
 </body>
 </html>
