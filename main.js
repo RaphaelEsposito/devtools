@@ -24,6 +24,7 @@ function showCards(outils) {
         let badgeText = "";
         let badgeClass = "";
         const card = document.createElement('div');
+        card.classList.add('border', 'border-gray-200', 'rounded-lg', 'p-4', 'shadow-sm', 'hover:shadow-md', 'transition-shadow', 'duration-300');
         card.classList.add('card');
         
         if (outil.gratuit) {
@@ -35,9 +36,9 @@ function showCards(outils) {
         }
 
         card.innerHTML = `
-        <h2 class="text-xl font-semibold">${outil.nom}</h2>
-        <p class="">${outil.description}</p>
-        <p class=""><strong>Catégorie:</strong> ${outil.categorie}</p>
+        <p class="opacity-75 text-sm p-1">${outil.categorie}</p>
+        <h2 class="text-xl font-semibold p-1">${outil.nom}</h2>
+        <p class="p-1 pb-2 opacity-75">${outil.description}</p>
         <span class="badge ${badgeClass}">${badgeText}</span>
     `;
         cardContainer.appendChild(card);
