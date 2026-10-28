@@ -1,0 +1,12 @@
+.custom-card {
+  border-left: 4px solid #2563eb;
+  border-radius: 1rem;
+  background-color: #eff6ff;
+  padding: 1.5rem;
+}
+.custom-card h1 {
+  color: #2563eb;
+}
+.custom-card:hover {
+  opacity: 0.8;
+}

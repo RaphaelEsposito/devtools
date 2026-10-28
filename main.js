@@ -14,21 +14,31 @@ function showCards(outils) {
 
     if (outils.length === 0) {
         const noResultsMessage = document.getElementById('message-vide');
-        noResultsMessage.classList.remove('hidden');
+        noResultsMessage.hidden = false;
     } else {
         const noResultsMessage = document.getElementById('message-vide');
-        noResultsMessage.classList.add('hidden');
+        noResultsMessage.hidden = true;
     }
 
     outils.forEach((outil) => {
+        let badgeText = "";
+        let badgeClass = "";
         const card = document.createElement('div');
         card.classList.add('card');
+        
+        if (outil.gratuit) {
+            badgeText = "Gratuit";
+            badgeClass = "badge-gratuit"; 
+        } else {
+            badgeText = "Payant";
+            badgeClass = "badge-payant"; 
+        }
 
         card.innerHTML = `
         <h2 class="text-xl font-semibold">${outil.nom}</h2>
-        <p class="mt-2">${outil.description}</p>
-        <p class="mt-2"><strong>Catégorie:</strong> ${outil.categorie}</p>
-        <p class="mt-2"><strong>Gratuit:</strong> ${outil.gratuit ? 'Oui' : 'Non'}</p>
+        <p class="">${outil.description}</p>
+        <p class=""><strong>Catégorie:</strong> ${outil.categorie}</p>
+        <span class="badge ${badgeClass}">${badgeText}</span>
     `;
         cardContainer.appendChild(card);
 

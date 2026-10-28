@@ -1,0 +1,24 @@
+$gratuit: #047857;
+$BgGratuit: #d1fae5;
+$payant: #92400e;
+$BgPayant: #fef3c7;
+
+@mixin badge($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+}
+
+.badge-gratuit {
+    @include badge($BgGratuit, $gratuit);
+}
+
+.badge-payant {
+    @include badge($BgPayant, $payant);
+}
+
+.badge {
+    display:flex;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
