@@ -1,0 +1,7 @@
+/node_modules
+/dist
+.history/
+src/output.css
+src/scss/*.css
+src/scss/*.css.map
+/.vscode
