@@ -1,4 +1,1 @@
 @import "tailwindcss";
-@import "./scss/style.css" layer(components);
-
-@source not "../.history";

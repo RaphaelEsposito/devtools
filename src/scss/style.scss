@@ -1,20 +1,36 @@
-@use "variables" as vars;
+$gratuit: #047857;
+$BgGratuit: #d1fae5;
+$payant: #92400e;
+$BgPayant: #fef3c7;
 
-@mixin card-frame($color) {
-    border-left: 4px solid $color;
-    border-radius: vars.$space * 4;
+@mixin badge($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
 }
 
-.custom-card {
-    @include card-frame(vars.$primary-color);
-    background-color: #eff6ff;
-    padding: vars.$space * 6;
+.badge-gratuit {
+    @include badge($BgGratuit, $gratuit);
+}
 
-    h1 {
-        color: vars.$primary-color;
-    }
+.badge-payant {
+    @include badge($BgPayant, $payant);
+}
 
-    &:hover {
-        opacity: 0.8;
+.badge {
+    display:inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    &::before {
+        content: '';
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background-color: currentColor;
     }
 }
+
